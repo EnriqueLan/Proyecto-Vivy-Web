@@ -1,11 +1,26 @@
+// body.scss
+
 body {
-    background-color: rgb(127, 127, 127);
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    gap: 10px;
-    display: grid;
-    grid-template-areas: "nav head head" "nav principal secundario" "footer footer footer";
-    grid-template-columns: 0.5fr 3fr 2fr;
-    grid-template-rows: 0.5fr 3fr 0.5fr;
+  background-color: $color-body;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  gap: 10px;
+  display: grid;
+  grid-template-areas: "nav head head" "nav principal secundario" "footer footer footer";
+  grid-template-columns: 0.2fr 3fr 2fr;
+  grid-template-rows: 0.5fr 3fr 0.5fr;
+}
+
+@media (max-width: 768px) {
+  body {
+      grid-template-areas:
+          'head'
+          'nav'
+          'principal'
+          'secundario'
+          'footer';
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
   }
+}

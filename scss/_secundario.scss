@@ -1,0 +1,104 @@
+.c4 {
+    grid-area: secundario;
+    background-color: $color-principal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.contenedorimagen {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    overflow: hidden;
+}
+
+.imagenprincipal1 {
+    width: $ancho-imagenes1;
+    height: $altura-imagenes1;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.imagenprincipal2 {
+    width: $ancho-imagenes2;
+    height: $altura-imagenes2;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.texto {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.contenedorimagen:hover .imagenprincipal1 {
+    transform: translateY(-$desplazamiento-hover1);
+}
+
+.contenedorimagen:hover .imagenprincipal2 {
+    transform: translateY(-$desplazamiento-hover2);
+}
+
+.contenedorimagen:hover .texto {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+    .c4 {
+        grid-area: secundario;
+        background-color: $color-principal;
+        padding: 10px;
+    }
+
+    .contenedorimagen {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .imagenprincipal1 {
+        width: $ancho-imagenesmobile1; 
+        height: $altura-imagenesmobile1;
+        border-radius: 10px;
+        transform: none; 
+        transition: none; 
+    }
+
+    .imagenprincipal2 {
+        width: $ancho-imagenesmobile2; 
+        height: $altura-imagenesmobile2;
+        border-radius: 10px;
+        transform: none;
+        transition: none;
+    }
+
+    .texto {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .contenedorimagen:hover .imagenprincipal1,
+    .contenedorimagen:hover .imagenprincipal2 {
+        transform: none;
+    }
+
+    .contenedorimagen:hover .texto {
+        opacity: 1;
+        transform: none;
+    }
+}
+

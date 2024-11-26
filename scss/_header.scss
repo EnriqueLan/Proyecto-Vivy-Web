@@ -1,0 +1,43 @@
+.c2{
+    grid-area: head;
+    background-color: $color-head;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.logo {
+    width: $ancho-logo;
+    height: $altura-logo;
+}
+
+.titulopagina {
+    font-family: 'audiowide';
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'audiowide';
+}
+
+@media (max-width: 768px){ .c2 {
+    grid-area: head;
+    background-color: $color-head;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    width: $ancho-logomobile;
+    height: $altura-logomobile;
+}
+
+.titulopagina {
+    font-size: 1.5rem;
+}
+}

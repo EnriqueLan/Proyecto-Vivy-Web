@@ -1,0 +1,32 @@
+.c3{
+    grid-area: principal;
+    background-color: $color-principal;
+    border-radius: 10px;
+}
+
+.imagenprincipal1 {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+p {
+    margin: 10px;
+    font-family: 'audiowide';
+    font-size: $tamañofuente-p;
+}
+
+h3 {
+    margin: 10px;
+    font-size: $tamañofuente-h3;
+}
+@media (max-width: 768px){ .c3 {
+    grid-area: principal;
+    background-color: $color-principal;
+    padding: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+}

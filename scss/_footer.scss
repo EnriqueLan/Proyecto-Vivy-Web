@@ -1,0 +1,34 @@
+.c5 {
+    grid-area: footer;
+    background-color: $color-footer;
+    padding: 20px;
+    text-align: center;
+    color: $color-titulos;
+    border-radius: 10px;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: $color-titulos;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: $color-titulos;
+}
+
+@media (max-width: 768px){ .c5 {
+    grid-area: footer;
+    background-color: $color-footer;
+    padding: 10px;
+    text-align: center;
+}
+}
