@@ -1,5 +1,5 @@
 .c1 {
-    grid-area: nav; 
+    grid-area: nav;
     background-color: $color-nav;
     display: flex;
     flex-direction: column;
@@ -10,19 +10,18 @@
     height: 100%;
     width: 250px;
     top: 0;
-    left: -250px; 
+    left: -250px;
     transition: left 0.3s ease;
     z-index: 10;
     border-radius: 10px;
 }
-
 
 .c1:hover {
     left: 0;
 }
 
 
-a {
+.c1 a {
     background-color: black;
     color: white;
     padding: 10px 20px;
@@ -32,29 +31,55 @@ a {
     border-radius: 5px;
     box-sizing: border-box;
     white-space: nowrap;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.c1:hover a {
+    opacity: 1; 
+}
+
+
+.c1::after {
+    content: "➤"; 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 88%; 
+    font-size: 2rem; 
+    color: black;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1; 
+}
+
+.c1:hover::after {
+    opacity: 0; 
 }
 
 
 @media (max-width: 768px) {
     .c1 {
-        position: static;
+        position: static; 
         flex-direction: row; 
         justify-content: center;
         gap: 10px;
         padding: 10px;
         left: 0;
         height: auto; 
-        transition: none;
         width: 100%;
+        transition: none; 
     }
 
-
-    a {
-        width: auto; 
+    .c1 a {
+        opacity: 1; 
+        width: auto;
         padding: 10px 20px;
         text-align: center;
+        transition: none; 
+    }
+
+    .c1::after {
+        content: none; 
     }
 }
-
-
 
